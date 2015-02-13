@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.cnr.itd.uni2014.javafx.service.TestController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label text="Process" GridPane.halignment="RIGHT" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+      <TextField fx:id="numberOfItems" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+      <Label text="Items" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+      <Button fx:id="startButton" mnemonicParsing="false" text="Start" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+      <Button fx:id="cancelButton" mnemonicParsing="false" text="Cancel" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+      <Button fx:id="exceptionButton" mnemonicParsing="false" text="Exception" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="10" GridPane.valignment="CENTER" />
+      <Label text="Exception" GridPane.halignment="RIGHT" GridPane.rowIndex="9" />
+      <ProgressBar fx:id="progressBar" prefHeight="20.0" prefWidth="500.0" GridPane.columnSpan="6" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" />
+      <Label text="Value" GridPane.halignment="RIGHT" GridPane.rowIndex="8" />
+      <Label text="Progress" GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+      <Label text="Work done" GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+      <Label text="Total work" GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+      <Label text="State" GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+      <Label text="Running" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+      <Label text="Message" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+      <Label text="Title" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+      <Label fx:id="title" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="1">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="message" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="2">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="running" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="3">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="state" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="totalWork" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="5">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="workDone" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="6">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="progress" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="7">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="value" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="8">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+      <Label fx:id="exception" GridPane.columnIndex="1" GridPane.columnSpan="5" GridPane.rowIndex="9">
+         <padding>
+            <Insets left="20.0" />
+         </padding></Label>
+   </children>
+</GridPane>

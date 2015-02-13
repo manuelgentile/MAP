@@ -12,15 +12,20 @@ public class MainBinding01 extends Application {
 	@Override
 	public void start(Stage stage) {
 		BorderPane root = new BorderPane();
+
+		Scene scene = new Scene(root, 500, 500, Color.BLACK);
 		Slider slider = new Slider();
 		slider.setMax(1);
-		Scene scene = new Scene(root, 500, 500, Color.BLACK);
+
 		final Rectangle r = new Rectangle(25, 25, 250, 250);
 		r.setFill(Color.BLUE);
+
 		root.setCenter(r);
 		root.setBottom(slider);
+
 		r.scaleXProperty().bind(slider.valueProperty());
 		r.scaleYProperty().bind(slider.valueProperty());
+
 		stage.setTitle("JavaFX Scene Graph Demo");
 		stage.setScene(scene);
 		stage.show();
