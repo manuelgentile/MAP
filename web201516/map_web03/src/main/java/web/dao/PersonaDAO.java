@@ -1,10 +1,10 @@
-package map_web03;
+package web.dao;
 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import map_web03.model.Persona;
+import web.model.Persona;
 
 @Stateless
 public class PersonaDAO {
