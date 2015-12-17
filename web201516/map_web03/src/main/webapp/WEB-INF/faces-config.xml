@@ -4,14 +4,16 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
         http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
 	version="2.2">
-	
-	<!-- 
-	<managed-bean>
-		<managed-bean-class>map_web02.Prova</managed-bean-class>
-		<managed-bean-name>prova</managed-bean-name>
-		<managed-bean-scope>session</managed-bean-scope>
-	</managed-bean>
-	 -->
-	 
-	 
+
+	<!-- <managed-bean> <managed-bean-class>map_web02.Prova</managed-bean-class> 
+		<managed-bean-name>prova</managed-bean-name> <managed-bean-scope>session</managed-bean-scope> 
+		</managed-bean> -->
+	<application>
+		<locale-config>
+			<default-locale>it</default-locale>
+		</locale-config>
+
+	</application>
+
+
 </faces-config>

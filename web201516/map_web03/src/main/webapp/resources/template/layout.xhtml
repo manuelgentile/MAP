@@ -4,7 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
 
 <h:head>
 	<title>Titolo</title>
@@ -14,16 +15,22 @@
 <h:body>
 	<div id="leftSide">
 		<h:form>
-			<h:panelGrid columns="2" rendered="#{not loginController.logged}">
-				<h:outputText value="Username:" />
-				<h:inputText value="#{credenziali.username}" />
-				<h:outputText value="Password:" />
-				<h:inputSecret value="#{credenziali.password}" />
+			<p:panel header="TTT">
+				<h:panelGrid columns="2" rendered="#{not loginController.logged}">
+					<h:outputText value="Username:" />
+					<p:inputText value="#{credenziali.username}" />
+					<h:outputText value="Password:" />
+					<p:password value="#{credenziali.password}" />
 
-				<h:commandButton action="#{loginController.login(credenziali)}"
-					value="Login" />
+					<p:commandButton action="#{loginController.login(credenziali)}"
+						value="Login">
 
-			</h:panelGrid>
+						<f:ajax execute="@form" render="@form" />
+
+					</p:commandButton>
+
+				</h:panelGrid>
+			</p:panel>
 
 			<h:panelGrid columns="2" rendered="#{loginController.logged}">
 

@@ -3,30 +3,40 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	
+	xmlns:p="http://primefaces.org/ui"
 	template="/resources/template/layout.xhtml">
 	<ui:define name="leftContent">
-		
-		
-	
+
+
+
 	</ui:define>
-	
+
 	<ui:define name="bodyContent">
 		<h:form>
-			<h:panelGrid columns="2">
-				<h:outputText value="Nome:"/>
-				<h:inputText value="#{servizio.persona.nome}"/>
-				<h:outputText value="Cognome:"/>
-				<h:inputText value="#{servizio.persona.cognome}"/>
-			
+
+			<h:panelGrid columns="3">
+				<h:outputText value="Nome:" />
+				<h:inputText id="nome" value="#{servizio.persona.nome}">
+					<f:ajax event="blur" render="msg_nome" />
+				</h:inputText>
+				<h:message id="msg_nome" for="nome" />
+				<h:outputText value="Cognome:" />
+				<h:inputText id="cognome" value="#{servizio.persona.cognome}" />
+				<h:message for="cognome" />
+				<h:outputText value="Ruolo:" />
+				<h:selectOneMenu converter="#{ruoloConverter}" id="ruolo" value="#{servizio.persona.ruolo}" >
+					<f:selectItems value="#{servizio.ruoli}" var="item"
+						itemLabel="#{item.nome}" itemValue="#{item}"/>
+				</h:selectOneMenu>
+				<h:message for="ruolo" />
 				<h:commandButton action="#{servizio.salva}" value="Memorizza" />
-			
+
 			</h:panelGrid>
-		
+
 		</h:form>
-    	
-    	
-	
+
+
+
 	</ui:define>
-	
+
 </ui:composition>

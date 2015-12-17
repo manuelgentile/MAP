@@ -4,23 +4,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.validation.constraints.Size;
 
 @Entity
-public class Persona {
+public class Ruolo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Size(min=5)
-	
 	private String nome;
-	@Size(min=5)
-	private String cognome;
-	@ManyToOne
-	@JoinColumn
-	private Ruolo ruolo;
 
 	public Long getId() {
 		return id;
@@ -36,24 +26,6 @@ public class Persona {
 
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-
-	public String getCognome() {
-		return cognome;
-	}
-
-	public void setCognome(String cognome) {
-		this.cognome = cognome;
-	}
-	
-	
-
-	public Ruolo getRuolo() {
-		return ruolo;
-	}
-
-	public void setRuolo(Ruolo ruolo) {
-		this.ruolo = ruolo;
 	}
 
 	@Override
@@ -72,7 +44,7 @@ public class Persona {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		Persona other = (Persona) obj;
+		Ruolo other = (Ruolo) obj;
 		if (id == null) {
 			if (other.id != null)
 				return false;

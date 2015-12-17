@@ -1,6 +1,8 @@
 package web.controller;
 
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
@@ -16,12 +18,13 @@ public class LoginController implements Serializable {
 	@Inject
 	UtenteDAO dao;
 	private Utente utenteLoggato;
+	@Inject Logger log;
 	
 	
 	public void login(Credenziali credenziali) {
 		
 		
-		
+		log.log(Level.INFO, "ciao");
 		Utente utente=dao.check(credenziali.getUsername(), credenziali.getPassword());
 		if (utente!=null)
 			this.utenteLoggato=utente;
